@@ -8,7 +8,7 @@ export default function Header() {
                 <Link href='/'>
                     <a>Home</a>
                 </Link>
-                <Link href='#'>
+                <Link href='/Tickets'>
                     <a>Faça seu ticket</a>    
                 </Link>   
             </nav>
