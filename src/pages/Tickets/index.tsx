@@ -22,12 +22,12 @@ export default function Tickets() {
       .then((res) => {
         console.log(res);
         console.log(res.data);
+
+        router.push('/Success');
       })
       .catch((error) => {
         console.error(error.response.data);
-      });
-
-    router.push('/Success');
+      }); 
   };
 
   return (
@@ -43,22 +43,23 @@ export default function Tickets() {
           <div className={styles.formHead}>
             <div className={styles.nameContainer}>
               <label htmlFor="name">Seu Nome</label>
-              <input type="text" id="name" name="name" required />
+              <input type="text" id="name" name="name" placeholder="Digite o seu nome" required />
             </div>
             <div className={styles.emailContainer}>
               <label htmlFor="email">Seu endereço de e-mail</label>
-              <input type="text" id="email" name="email" required />
+              <input type="text" id="email" name="email" placeholder="Digite um e-mail para contato" required />
             </div>
           </div>
           <div className={styles.reasonContainer}>
             <label htmlFor="reason">Motivo do contato</label>
-            <input type="text" name="reason" id="reason" required />
+            <input type="text" name="reason" id="reason" placeholder="Nos informe o motivo do contato" required />
           </div>
           <div className={styles.descriptionContainer}>
             <label htmlFor="description">Descreva sua situação</label>
             <textarea
               name="description"
               id="description"
+              placeholder="Descreva seu problema"
               cols={50}
               rows={5}
             ></textarea>
